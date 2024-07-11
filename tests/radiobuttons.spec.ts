@@ -23,7 +23,7 @@ test.describe('DemoQA Radiobuttons', () => {
     async ({ page }) => {
       // Arrange
       const expectedText = 'You have selected Yes';
-      const choosenButton = 'Yes'
+      const choosenButton = 'Yes';
       //Act
       await radioButtonPage.clickYesButton();
       //Assert
@@ -43,7 +43,7 @@ test.describe('DemoQA Radiobuttons', () => {
     async ({ page }) => {
       // Arrange
       const expectedText = 'You have selected Impressive';
-      const choosenButton = 'Impressive'
+      const choosenButton = 'Impressive';
       //Act
       await radioButtonPage.clickImpressiveButton();
       //Assert

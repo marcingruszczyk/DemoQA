@@ -12,6 +12,7 @@ export class RadioButtonPage {
   impressiveButton = this.page
     .locator('div')
     .filter({ hasText: /^Impressive$/ });
+
   async clickYesButton(): Promise<void> {
     await this.yesButton.click();
   }
