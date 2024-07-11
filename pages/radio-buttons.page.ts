@@ -9,17 +9,23 @@ export class RadioButtonPage {
   mainMenu = new MainMenuComponent(this.page);
 
   yesButton = this.page.locator('div').filter({ hasText: /^Yes$/ });
-
+  impressiveButton = this.page
+    .locator('div')
+    .filter({ hasText: /^Impressive$/ });
   async clickYesButton(): Promise<void> {
     await this.yesButton.click();
-
+  }
+  async clickImpressiveButton(): Promise<void> {
+    await this.impressiveButton.click();
   }
 
-  async yesButtonAssertion(expectedText: string): Promise<void> {
+  async radioButtonAssertion(
+    expectedText: string,
+    choosenButton: string
+  ): Promise<void> {
     await expect(this.page.getByText(expectedText)).toBeVisible();
-      await expect(this.page.getByRole('paragraph').getByText('Yes')).toHaveClass(
-        'text-success'
-      );
-
+    await expect(
+      this.page.getByRole('paragraph').getByText(choosenButton)
+    ).toHaveClass('text-success');
   }
 }

@@ -17,16 +17,37 @@ test.describe('DemoQA Radiobuttons', () => {
       annotation: {
         type: 'Documentation',
         description:
-          'In this test I need to check the data after pick Yes button is green',
+          'In this test I need to check the data after pick Yes button and text should be green',
       },
     },
     async ({ page }) => {
       // Arrange
       const expectedText = 'You have selected Yes';
+      const choosenButton = 'Yes'
       //Act
       await radioButtonPage.clickYesButton();
       //Assert
-      await radioButtonPage.yesButtonAssertion(expectedText);
+      await radioButtonPage.radioButtonAssertion(expectedText, choosenButton);
+    }
+  );
+  test(
+    'Check Impressive radio button',
+    {
+      tag: '@RadioButton',
+      annotation: {
+        type: 'Documentation',
+        description:
+          'In this test I need to check the data after pick Impressive button and text should be green',
+      },
+    },
+    async ({ page }) => {
+      // Arrange
+      const expectedText = 'You have selected Impressive';
+      const choosenButton = 'Impressive'
+      //Act
+      await radioButtonPage.clickImpressiveButton();
+      //Assert
+      await radioButtonPage.radioButtonAssertion(expectedText, choosenButton);
     }
   );
 });
