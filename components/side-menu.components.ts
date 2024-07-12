@@ -6,4 +6,6 @@ export class SideMenuComponent {
   radioButtonSideMenu = this.page
     .locator('li')
     .filter({ hasText: 'Radio Button' });
+
+  checkBoxSideMenu = this.page.locator('li').filter({ hasText: 'Check Box' });
 }
