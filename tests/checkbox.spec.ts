@@ -26,14 +26,13 @@ test.describe('DemoQA Check boxes', () => {
       const expectedElementsAmount = 17;
       //Act
       await checkBoxPage.clickCheckbox();
-      await checkBoxPage.numberOfElements();
       const count = await checkBoxPage.numberOfElements();
       //Assert
       await expect(checkBoxPage.validateCheckbox()).toBeTruthy();
       await expect(count).toEqual(expectedElementsAmount);
     }
   );
-  test.only(
+  test(
     'Click expand all, then pick checkbox and validate number of elements ',
     {
       tag: '@CheckBox',
@@ -48,7 +47,6 @@ test.describe('DemoQA Check boxes', () => {
       const expectedElementsAmount = 5;
       //Act
       await checkBoxPage.expandAndPickOfficeCheckbox();
-      await checkBoxPage.numberOfElements();
       const count = await checkBoxPage.numberOfElements();
       //Assert
       await expect(checkBoxPage.validateOfficeCheckboxes()).toBeTruthy();
