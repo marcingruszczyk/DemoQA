@@ -11,7 +11,7 @@ test.describe('DemoQA Check boxes', () => {
     await checkBoxPage.sideMenu.checkBoxSideMenu.click();
   });
 
-  test.only(
+  test(
     'Click checkbox and validate selected boxes ',
     {
       tag: '@CheckBox',
@@ -27,9 +27,31 @@ test.describe('DemoQA Check boxes', () => {
       //Act
       await checkBoxPage.clickCheckbox();
       await checkBoxPage.numberOfElements();
-      const count = await checkBoxPage.numberOfElements()
+      const count = await checkBoxPage.numberOfElements();
       //Assert
       await expect(checkBoxPage.validateCheckbox()).toBeTruthy();
+      await expect(count).toEqual(expectedElementsAmount);
+    }
+  );
+  test.only(
+    'Click expand all, then pick checkbox and validate number of elements ',
+    {
+      tag: '@CheckBox',
+      annotation: {
+        type: 'Documentation',
+        description:
+          'Click expand all, then pick checkbox and validate number of elements',
+      },
+    },
+    async ({ page }) => {
+      // Arrange
+      const expectedElementsAmount = 5;
+      //Act
+      await checkBoxPage.expandAndPickOfficeCheckbox();
+      await checkBoxPage.numberOfElements();
+      const count = await checkBoxPage.numberOfElements();
+      //Assert
+      await expect(checkBoxPage.validateOfficeCheckboxes()).toBeTruthy();
       await expect(count).toEqual(expectedElementsAmount);
     }
   );
