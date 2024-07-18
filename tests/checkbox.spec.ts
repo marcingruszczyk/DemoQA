@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { RadioButtonPage } from '../pages/radio-buttons.page';
 import { CheckBoxPage } from '../pages/check-box.page';
 
 test.describe('DemoQA Check boxes', () => {

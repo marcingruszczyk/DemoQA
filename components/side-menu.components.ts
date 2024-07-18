@@ -8,4 +8,8 @@ export class SideMenuComponent {
     .filter({ hasText: 'Radio Button' });
 
   checkBoxSideMenu = this.page.locator('li').filter({ hasText: 'Check Box' });
+
+  textBoxSideMenu = this.page.locator('li').filter({ hasText: 'Text Box' })
 }
+
+
