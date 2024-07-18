@@ -28,8 +28,8 @@ test.describe('DemoQA Check boxes', () => {
       await checkBoxPage.clickCheckbox();
       const count = await checkBoxPage.numberOfElements();
       //Assert
-      await expect(checkBoxPage.validateCheckbox()).toBeTruthy();
-      await expect(count).toEqual(expectedElementsAmount);
+       expect(checkBoxPage.validateCheckbox()).toBeTruthy();
+       expect(count).toEqual(expectedElementsAmount);
     }
   );
   test(
@@ -49,8 +49,8 @@ test.describe('DemoQA Check boxes', () => {
       await checkBoxPage.expandAndPickOfficeCheckbox();
       const count = await checkBoxPage.numberOfElements();
       //Assert
-      await expect(checkBoxPage.validateOfficeCheckboxes()).toBeTruthy();
-      await expect(count).toEqual(expectedElementsAmount);
+      expect(checkBoxPage.validateOfficeCheckboxes()).toBeTruthy();
+      expect(count).toEqual(expectedElementsAmount);
     }
   );
 });

@@ -23,11 +23,11 @@ test.describe('DemoQA Radiobuttons', () => {
     async ({ page }) => {
       // Arrange
       const expectedText = 'You have selected Yes';
-      const choosenButton = 'Yes';
+      const chosenButton = 'Yes';
       //Act
       await radioButtonPage.clickYesButton();
       //Assert
-      await radioButtonPage.radioButtonAssertion(expectedText, choosenButton);
+      await radioButtonPage.radioButtonAssertion(expectedText, chosenButton);
     }
   );
   test(
