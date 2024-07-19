@@ -3,7 +3,8 @@ import { MainMenuComponent } from '../components/main-menu.components';
 import { SideMenuComponent } from '../components/side-menu.components';
 
 export class TextBoxPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page) {
+  }
 
   sideMenu = new SideMenuComponent(this.page);
   mainMenu = new MainMenuComponent(this.page);
@@ -13,11 +14,6 @@ export class TextBoxPage {
   fillCurrentAddress = this.page.getByPlaceholder('Current Address');
   fillPermanentAddress = this.page.locator('#permanentAddress');
   clickSubmitButton = this.page.getByRole('button', { name: 'Submit' });
-
-  // await this.page.getByText('Name:a').click();
-  // await this.page.getByText('Email:a@a.com').click();
-  // await this.page.getByText('Current Address :a').click();
-  // await this.page.getByText('Permananet Address :a').click();
 
   async fillAndSubmitForm(
     Name: string,
