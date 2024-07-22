@@ -13,6 +13,8 @@ export class SideMenuComponent {
   textBoxSideMenu = this.page.locator('li').filter({ hasText: 'Text Box' });
 
   buttonsSideMenu = this.page.locator('li').filter({ hasText: 'Buttons' });
+
+  linksSideMenu = this.page.locator('li').filter({ hasText: /^Links$/ });
 }
 
 
