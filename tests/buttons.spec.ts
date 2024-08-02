@@ -1,7 +1,6 @@
 import { test } from '@playwright/test';
 import { ButtonsBoxPage } from '../pages/buttons.page';
 
-
 test.describe('DemoQA Buttons', () => {
   let buttonsBoxPage: ButtonsBoxPage;
   test.beforeEach(async ({ page }) => {
@@ -18,8 +17,8 @@ test.describe('DemoQA Buttons', () => {
       annotation: {
         type: 'Documentation',
         description:
-          'In this test I need to click all three buttons in specific way and then verify messages'
-      }
+          'In this test I need to click all three buttons in specific way and then verify messages',
+      },
     },
     async ({ page }) => {
       // Arrange
@@ -29,7 +28,11 @@ test.describe('DemoQA Buttons', () => {
       //Act
       await buttonsBoxPage.cLickOnButtons();
       //Assert
-      await buttonsBoxPage.assertButtonsMessages(doubleCLick, rightClick, leftClick);
-    }
+      await buttonsBoxPage.assertButtonsMessages(
+        doubleCLick,
+        rightClick,
+        leftClick,
+      );
+    },
   );
 });

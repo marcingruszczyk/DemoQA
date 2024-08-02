@@ -22,11 +22,11 @@ export class RadioButtonPage {
 
   async radioButtonAssertion(
     expectedText: string,
-    chosenButton: string
+    chosenButton: string,
   ): Promise<void> {
     await expect(this.page.getByText(expectedText)).toBeVisible();
     await expect(
-      this.page.getByRole('paragraph').getByText(chosenButton)
+      this.page.getByRole('paragraph').getByText(chosenButton),
     ).toHaveClass('text-success');
   }
 }

@@ -17,8 +17,8 @@ test.describe('DemoQA Radiobuttons', () => {
       annotation: {
         type: 'Documentation',
         description:
-          'In this test I need to check the data after pick Yes button and text should be green'
-      }
+          'In this test I need to check the data after pick Yes button and text should be green',
+      },
     },
     async ({ page }) => {
       // Arrange
@@ -28,7 +28,7 @@ test.describe('DemoQA Radiobuttons', () => {
       await radioButtonPage.clickYesButton();
       //Assert
       await radioButtonPage.radioButtonAssertion(expectedText, chosenButton);
-    }
+    },
   );
   test(
     'Check Impressive radio button',
@@ -37,8 +37,8 @@ test.describe('DemoQA Radiobuttons', () => {
       annotation: {
         type: 'Documentation',
         description:
-          'In this test I need to check the data after pick Impressive button and text should be green'
-      }
+          'In this test I need to check the data after pick Impressive button and text should be green',
+      },
     },
     async ({ page }) => {
       // Arrange
@@ -48,6 +48,6 @@ test.describe('DemoQA Radiobuttons', () => {
       await radioButtonPage.clickImpressiveButton();
       //Assert
       await radioButtonPage.radioButtonAssertion(expectedText, chosenButton);
-    }
+    },
   );
 });

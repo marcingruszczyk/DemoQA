@@ -7,13 +7,35 @@
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "codegen": "npx playwright codegen https://demoqa.com/",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "lint": "prettier --write . && eslint --fix",
+    "type-check": "tsc",
+    "pre-commit": "lint-staged",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "@playwright/test": "^1.45.1",
-    "@types/node": "^20.14.10"
+    "@types/node": "^20.14.10",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0"
   }
 }

@@ -3,8 +3,7 @@ import { MainMenuComponent } from '../components/main-menu.components';
 import { SideMenuComponent } from '../components/side-menu.components';
 
 export class TextBoxPage {
-  constructor(private page: Page) {
-  }
+  constructor(private page: Page) {}
 
   sideMenu = new SideMenuComponent(this.page);
   mainMenu = new MainMenuComponent(this.page);
@@ -19,7 +18,7 @@ export class TextBoxPage {
     Name: string,
     emailAddress: string,
     currentAddress: string,
-    permanentAddress: string
+    permanentAddress: string,
   ): Promise<void> {
     await this.fillFullName.fill(Name);
     await this.fillEmailAddress.fill(emailAddress);
@@ -32,11 +31,15 @@ export class TextBoxPage {
     Name: string,
     emailAddress: string,
     currentAddress: string,
-    permanentAddress: string
+    permanentAddress: string,
   ): Promise<void> {
     await expect(this.page.getByText(`Name:${Name}`)).toBeVisible();
     await expect(this.page.getByText(`Email:${emailAddress}`)).toBeVisible();
-    await expect(this.page.getByText(`Current Address :${currentAddress}`)).toBeVisible();
-    await expect(this.page.getByText(`Permananet Address :${permanentAddress}`)).toBeVisible();
+    await expect(
+      this.page.getByText(`Current Address :${currentAddress}`),
+    ).toBeVisible();
+    await expect(
+      this.page.getByText(`Permananet Address :${permanentAddress}`),
+    ).toBeVisible();
   }
 }

@@ -1,8 +1,7 @@
 import { Page } from '@playwright/test';
 
 export class SideMenuComponent {
-  constructor(private page: Page) {
-  }
+  constructor(private page: Page) {}
 
   radioButtonSideMenu = this.page
     .locator('li')
@@ -16,5 +15,3 @@ export class SideMenuComponent {
 
   linksSideMenu = this.page.locator('li').filter({ hasText: /^Links$/ });
 }
-
-
