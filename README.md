@@ -4,26 +4,26 @@
 
 ## run:
 
-* npm init @eslint/config@latest
-* npm init @eslint/config@latest -- --config eslint-config-standard
-* npm install --save-dev --save-exact prettier
-* npm install typescript --save-dev
-* npm install --save-dev husky
-* npx husky init
-* npm install --save-dev lint-staged
+- npm init @eslint/config@latest
+- npm init @eslint/config@latest -- --config eslint-config-standard
+- npm install --save-dev --save-exact prettier
+- npm install typescript --save-dev
+- npm install --save-dev husky
+- npx husky init
+- npm install --save-dev lint-staged
 
 ## To pre commit verify of my repo I used eslint, prettier, type-check, husky and lint-staged
 
 ### Next you need to configure files like:
 
-* .eslintignore
-* .lintstagedrc.json
-* .prettier.yml
-* .prettierignore
-* .prettierrc.json
-* eslint.config.js
-* eslint.json
-* tsconfig.json
+- .eslintignore
+- .lintstagedrc.json
+- .prettier.yml
+- .prettierignore
+- .prettierrc.json
+- eslint.config.js
+- eslint.json
+- tsconfig.json
 
 ### In case of how to fill files take a look into my repo
 
@@ -48,4 +48,3 @@
     }
   },
 ```
-
