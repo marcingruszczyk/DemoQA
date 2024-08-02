@@ -1,8 +1,6 @@
 name: Playwright
 run-name: Testing on branch ${{ github.head_ref }}
 on:
-  schedule:
-    - cron: '20 9 * 7 6'
   pull_request:
   workflow_dispatch:
     inputs:
