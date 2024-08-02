@@ -48,3 +48,7 @@
     }
   },
 ```
+
+### Another thing worth adding is the publication of the latest report on the GH pages
+
+* https://marcingruszczyk.github.io/DemoQA/
