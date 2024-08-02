@@ -52,4 +52,25 @@ test.describe('DemoQA Check boxes', () => {
       expect(count).toEqual(expectedElementsAmount);
     },
   );
+  test(
+    'Click expand all, then pick checkbox and validate number of elements Copy ',
+    {
+      tag: '@CheckBox',
+      annotation: {
+        type: 'Documentation',
+        description:
+          'Click expand all, then pick checkbox and validate number of elements',
+      },
+    },
+    async ({ page }) => {
+      // Arrange
+      const expectedElementsAmount = 5;
+      //Act
+      await checkBoxPage.expandAndPickOfficeCheckbox();
+      const count = await checkBoxPage.numberOfElements();
+      //Assert
+      expect(checkBoxPage.validateOfficeCheckboxes()).toBeTruthy();
+      expect(count).toEqual(expectedElementsAmount);
+    },
+  );
 });
